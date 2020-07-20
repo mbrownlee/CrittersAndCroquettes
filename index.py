@@ -17,27 +17,29 @@ from attractions import PettingZoo
 from attractions import WetLands
 from attractions import ReptileHouse
 
-miss_fuzz = Llama("Miss Fuzz", "domestic llama", "midday", "llama chow")
-print(miss_fuzz)
+miss_fuzz = Llama("Miss Fuzz", "domestic llama", "midday", "llama chow", 55234)
+print(miss_fuzz.chip_number)
+
+print(miss_fuzz.name)
 print(f'{miss_fuzz.name}, the {miss_fuzz.species}, is available to pet during the {miss_fuzz.shift} shift.')
 miss_fuzz.feed()
 
-fuzz_butt = Goat("Fuzz Butt", "cutest baby goat ever", "morning", "goat food")
+fuzz_butt = Goat("Fuzz Butt", "cutest baby goat ever", "morning", "goat food", 55012)
 print(fuzz_butt)
 print(f'{fuzz_butt.name}, the {fuzz_butt.species}, is available to pet during the {fuzz_butt.shift} shift.')
 fuzz_butt.feed()
 
-bugs = Bunny("Bugs", "wraskly rabbit", "afternoon", "carrots")
+bugs = Bunny("Bugs", "wraskly rabbit", "afternoon", "carrots", 55901)
 print(bugs)
 print(f'{bugs.name}, the {bugs.species}, is available to pet during the {bugs.shift} shift.')
 bugs.feed()
 
-rufus = Bobcat("Rufus", "best party cat", "morning", "bobcat chow")
+rufus = Bobcat("Rufus", "best party cat", "morning", "bobcat chow", 55743)
 print(rufus)
 print(f'{rufus.name}, the {rufus.species}, is available to pet during the {rufus.shift} shift.')
 rufus.feed()
 
-jerkface = Ostrich("Jerk Face", "biggest jerkiest bird ever", "afternoon", "stolen pellets")
+jerkface = Ostrich("Jerk Face", "biggest jerkiest bird ever", "afternoon", "stolen pellets", 55821)
 print(jerkface)
 print(f'{jerkface.name}, the {jerkface.species}, is available to pet during the {jerkface.shift} shift.')
 jerkface.feed()
@@ -46,7 +48,7 @@ eek = Python("Eek", "slimy", "ill behaved children")
 print(eek)
 eek.feed()
 
-heckno = Boa("Heck No", "nope", "mice")      
+heckno = Boa("Heck No", "nope", "mice")
 print(heckno)
 heckno.feed()
 
@@ -88,7 +90,7 @@ def report_animals_by_attractions(*attractions):
         print(f'{attraction.attraction_name} is where you can find {attraction.description} like:')
         for animal in attraction.animals:
             print(f'* {animal.name} the {animal.species}.')
-       
+
 
 varmint_village = PettingZoo("Varmint Village")
 varmint_village.animals.extend([bugs, miss_fuzz, fuzz_butt, rufus, jerkface])
