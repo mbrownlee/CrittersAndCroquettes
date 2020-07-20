@@ -8,6 +8,10 @@ class PettingZoo:
     def addAnimals(self, animals):
         self.animals.extend(animals)
 
+    @property
+    def last_critter_added(self):
+        return (f"{self.animals[-1].name} the {self.animals[-1].species} was the most recent animal added.")
+
 
 class ReptileHouse:
 
@@ -18,6 +22,10 @@ class ReptileHouse:
 
     def addAnimals(self, animals):
         self.animals.extend(animals)
+
+    @property
+    def last_critter_added(self):
+        return (f"{self.animals[-1].name} the {self.animals[-1].species} was the most recent animal added.")
    
 
 
@@ -31,5 +39,6 @@ class WetLands:
     def addAnimals(self, animals):
         self.animals.extend(animals)
 
-   
-
+    @property
+    def last_critter_added(self):
+        return (f"{self.animals[-1].name} the {self.animals[-1].species} was the most recent animal added.")
