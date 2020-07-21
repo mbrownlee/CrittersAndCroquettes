@@ -13,12 +13,23 @@ from animals import Blowfish
 from animals import Beluga
 from animals import Turtle
 from animals import Penguin
+from animals import Goose
+from animals import Animal
 from attractions import PettingZoo
 from attractions import WetLands
 from attractions import ReptileHouse
+from attractions import Attraction
+# from movements import Walking
+# from movements import Swimming
+# from movements import Slithering
+
+bob = Goose("Bob", "Canada goose", "morning","watercress sandwiches", 44995)
+bob.run()
+bob.swim()
 
 miss_fuzz = Llama("Miss Fuzz", "domestic llama", "midday", "llama chow", 55234)
 print(miss_fuzz.chip_number)
+
 
 print(miss_fuzz.name)
 print(f'{miss_fuzz.name}, the {miss_fuzz.species}, is available to pet during the {miss_fuzz.shift} shift.')
@@ -93,21 +104,23 @@ def report_animals_by_attractions(*attractions):
             print(f'* {animal.name} the {animal.species}.')
 
 
-varmint_village = PettingZoo("Varmint Village")
+varmint_village = PettingZoo("Varmint Village", "cute and fuzzy critters to cuddle!")
 varmint_village.animals.extend([bugs, miss_fuzz, fuzz_butt, rufus, jerkface])
 for animal in varmint_village.animals:
     print(f'You can find {animal.name} the {animal.species} in {varmint_village.attraction_name}.')
 print(varmint_village.last_critter_added)
+# varmint_village.add_animal(bob)
+# for animal in varmint_village.animals:
+#     print(animal)
 
-
-slither_inn = ReptileHouse("Slither Inn")
+slither_inn = ReptileHouse("Slither Inn", "snakes and slimy things of all sizes")
 slither_inn.animals.extend([eek, heckno, becoming, tiny, gross])
 for animal in slither_inn.animals:
     print(f'You can find {animal.name} the {animal.species} in {slither_inn.attraction_name}.')
 print(slither_inn.last_critter_added)
 
 
-critter_cove = WetLands("Critter Cover")
+critter_cove = WetLands("Critter Cover", "one acre walk through with lots of water animals")
 critter_cove.animals.extend([nemo, notouchy, dude, smooshy, tuxedo])
 for animal in critter_cove.animals:
     print(f'You can find {animal.name} the {animal.species} in {critter_cove.attraction_name}.')
